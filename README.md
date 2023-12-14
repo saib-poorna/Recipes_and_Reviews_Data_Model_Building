@@ -1,4 +1,4 @@
-# Recipes_and_Reviews_Data_Model_Building
+# Recipes and Reviews Data Model Building
 This project is by Aishwarya Ramesh and Sai Poornasree Balamurugan. In this project we predicted the average ratings of recipes in the Recipes and Reviews Dataset. 
 
 ## Problem Identification 
