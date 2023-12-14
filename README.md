@@ -38,7 +38,7 @@ Our grid for potential parameters include n_estimators, max_depth, and min_sampl
 
 After creating a GridSearchCV and fitting our model, the best parameters we got were regressor__max_depth: 10, regressor__min_samples_split: 10, and regressor__n_estimators: 10. The best model we got was RandomForestRegressor with a  max_depth of 10 and a min_samples_split of 10.  
 
-The rmse of our traning data was 0.623 and the r^2  of traning data set was 0.0555. Given the r^2 value the model is approximately performing the same on the train and test dataset. After creating the predictions for the test dataset, the rmse for the test dataset was 0.64 and the r^2 is 0.0014. 
+The rmse of our traning data was 0.623 and the r^2  of traning data set was 0.0555. After creating the predictions for the test dataset, the rmse for the test dataset was 0.64 and the r^2 is 0.0014. 
 
 Our final model's performance is an imporvement from our baseline's model because our training dataset rmse for baseline model of 0.6404 was greater than the training dataset rmse for our final model of 0.62. Furthermore, our training dataset r^2 for baseline model is 0.0016 which is less than the training dataset r^2 for final model of 0.055. 
 
@@ -70,7 +70,7 @@ Then we created new testing data for the less_tags and more_tags dataframe respe
 
 We created the permutation test by getting the less tags vs the more tags data frames. Then we set up the data to feed into our model, calculated the r^2 for the two different groups, and finally appended the absolute difference between r^2 for less and more tags to our test stats list. 
 
-After completing the permutation test our p-value was 0.007. Since this value is less than the threshold p-value of 0.05, we reject the null hypothesis that our model performs differently between recipes with more tags and less tags
+After completing the permutation test our p-value was 0.007. Since this value is less than the threshold p-value of 0.05, we reject the null hypothesis that our model performs eqaully well between recipes with less tags and more tags. 
 
 
 
