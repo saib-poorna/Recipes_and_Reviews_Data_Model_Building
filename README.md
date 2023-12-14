@@ -27,7 +27,7 @@ The next step, was to create a preprocessor using ColumnTranformer(), where we u
 
 The RMSE of our training dataset was 0.640, which indicates the average magnitude of the errors between the predicted average ratings and actual average ratings. The r^2 score on our training datasets were 0.0015. Given that this value is pretty low, our model is not performing too well. Next, we created preditions for our test dataset and got an RMSE value of 0.642. Our r^2 score was 0.0012. 
 
-In conlcusion, the r^2 score of 0.0015 for our training data and the r^2 score of 0.0012 for our test data are quite similar. Hence our model is performing approximately the same on the train and test data. As we can see from the low r^2 value, our model is not doing a good job of predicting the response variable. This means that the independent and dependent variables are not highly correlated in our model. 
+In conclusion, the r^2 score of 0.0015 for our training data and the r^2 score of 0.0012 for our test data are quite similar. Hence our model is performing approximately the same on the train and test data. As we can see from the low r^2 value, our model is not doing a good job of predicting the response variable. This means that the independent and dependent variables are not highly correlated in our model. 
 
 ## Final Model 
 In order to improve the quality of our model beyond what it is now, it seems that we must go beyond linear regression and model potential nonlinear relationships between features of our data and our response variable, `avg_rating`.
@@ -64,13 +64,13 @@ We started by defining a dataframe of recipes with less tags and recipes with mo
 |      275030 | paula deen s caramel apple cheesecake |               9 |            5 |        11 |        45 |      577.7 |       10 | less                |
 |      275032 | midori poached pears                  |               9 |            5 |         8 |        25 |      386.9 |       24 | more                |
 
-The a defined a dataframe called less_tags with only recipes with less tags and a datafram called more_tags with only recipes with more tags. These sub dataframes were created by finding the median number of tags in the entire dataset, which was 16. Then recipes with a number of tags less than 16 were categorized as less and recipes with 16 or greater number of tags were categorized as more. 
+The a defined a dataframe called less_tags with only recipes with less tags and a dataframe called more_tags with only recipes with more tags. These sub dataframes were created by finding the median number of tags in the entire dataset, which was 16. Then recipes with a number of tags less than 16 were categorized as less and recipes with 16 or greater number of tags were categorized as more. 
 
 Then we created new testing data for the less_tags and more_tags dataframe respectively. The r^2 for less_tags was 0.047 and the r^2 for more_tags was 0.041. We decided to do the absolute difference between the r^2 of less_tags and the r^2 of more_tags as our observed test statistic, which was 0.0065. 
 
 We created the permutation test by getting the less tags vs the more tags data frames. Then we set up the data to feed into our model, calculated the r^2 for the two different groups, and finally appended the absolute difference between r^2 for less and more tags to our test stats list. 
 
-After completing the permutation test our p-value was 0.007. Since this value is less than the threshold p-value of 0.05, we reject the null hypothesis that our model performs eqaully well between recipes with less tags and more tags. 
+After completing the permutation test our p-value was 0.007. Since this value is less than the threshold p-value of 0.05, we reject the null hypothesis that our model performs the same between recipes with less tags and more tags. In conclusion, there may be a difference in how the model performs between these groups
 
 
 
