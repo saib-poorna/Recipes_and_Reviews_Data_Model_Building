@@ -4,11 +4,13 @@ This project is by Aishwarya Ramesh and Sai Poornasree Balamurugan. In this proj
 ## Problem Identification 
 - metric we choose and why we choose it over other metrics (need to do)
 
+### Introduction
 Given the various recipes in the Recipes and Reviews dataset, it would be nice to be able to predict the rating for a new recipe. Hence, for our prediction problem we choose to predict the average rating of a recipe given the columns in the Recipes and Reviews Dataset. 
 
 In order to predict the average rating of a recipe, our goal was to develop a prediction model that could potentially give us an accurate average rating for a recipe using regression analysis. 
 
-However, before we could get into creating our baseline model we wanted to add `calories`, `n_tags`, and `less_or_more_tags` columns to our datatset. We added these columns to be able to use them in our model as exploratory variables. Our response variable is the `avg_rating` because we want to predict the average rating for a recipe. At the time of prediction, the information we would know is `recipe_id`, `name`, `n_ingredients`, `avg_rating`, `n_steps`, `minutes`, `calories`, and `n_tags`. We will only be using a few of these columns to train our model. 
+### Data Cleaning
+However, before we could get into creating our baseline model we first cleaned our data. Our cleaned dataset came from our Recipes_Reviews_Data_Analysis (project 3). We additonally wanted to add `calories`, `n_tags`, and `less_or_more_tags` columns to our datatset. We added these columns to be able to use them in our model as exploratory variables. Our response variable is the `avg_rating` because we want to predict the average rating for a recipe. At the time of prediction, the information we would know is `recipe_id`, `name`, `n_ingredients`, `avg_rating`, `n_steps`, `minutes`, `calories`, and `n_tags`. We will only be using a few of these columns to train our model. 
 
 In our final dataset, to be used for predictive modeling, we dropped the NaN values in the entire dataset. This is because the NaN values don't have much predictive value for the final average rating. Thus, it makes sense to delete these values from the dataset before performing any predictive modeling. 
 
